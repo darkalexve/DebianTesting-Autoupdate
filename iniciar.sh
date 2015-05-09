@@ -21,7 +21,7 @@ apt-get install git
 sleep 2 #Espera por 2 segs
 
 echo "Paso 3: Descargando de Github la data requerida..."
-cd /home/$USER/
+cd /var/tmp/
 git clone https://github.com/darkalexve/DebianTesting-Autoupdate.git
 sleep 2 #Espera por 2 segs
 cd DebianTesting-Autoupdate/sourcelist/
@@ -42,7 +42,7 @@ echo "Paso 6: Añadiendo Google DNS"
 cd /etc
 cp resolv.conf resolv.conf.copia
 rm -f resolv.conf 
-cd /home/$USER/
+cd /var/tmp/
 cd DebianTesting-Autoupdate/resolv/
 mv resolv.conf /etc/
 
