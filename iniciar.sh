@@ -8,10 +8,6 @@
 #Para Ejecutarlo vete a la ruta donde descargaste el proyecto y ejecuta desde terminal lo siguiente (sin comillas) "chmod +x ./iniciar.sh"
 #Creado por: Jonathan Melendez
 
-#Login
-echo 'Introdusca su password de root (su)'
-su
-
 echo "Paso 1: Copia de Seguridad de tu Sources List Actual"
 cd /etc/apt/
 cp sources.list sources.list.copia
@@ -25,10 +21,10 @@ apt-get install git
 sleep 2 #Espera por 2 segs
 
 echo "Paso 3: Descargando de Github la data requerida..."
-cd /home
+cd /home/$USER/
 git clone https://github.com/darkalexve/DebianTesting-Autoupdate.git
 sleep 2 #Espera por 2 segs
-cd DebianTesting-Autoupdate/sourcelist
+cd DebianTesting-Autoupdate/sourcelist/
 mv sources.list /etc/apt/
 
 sleep 2 #Espera por 2 segs
@@ -46,8 +42,8 @@ echo "Paso 6: Añadiendo Google DNS"
 cd /etc
 cp resolv.conf resolv.conf.copia
 rm -f resolv.conf 
-cd /home
-cd DebianTesting-Autoupdate/resolv
+cd /home/$USER/
+cd DebianTesting-Autoupdate/resolv/
 mv resolv.conf /etc/
 
 sleep 2 #Espera por 2 segs
