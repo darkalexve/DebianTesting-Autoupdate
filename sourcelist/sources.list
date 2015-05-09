@@ -1,0 +1,32 @@
+#Sources List del script  Semi-Instalable creado por Jonathan Melendez 
+
+#deb http://cdn.debian.net/debian/ testing main
+#deb-src http://cdn.debian.net/debian/ testing main
+
+#CANTV Repos
+deb http://debian.cantv.net/debian/ testing main contrib non-free
+deb-src http://debian.cantv.net/debian/ testing main contrib non-free
+#Espejos de CANTV Repos
+deb http://mirror-01.cantv.net/debian/ testing main contrib non-free
+deb-src http://mirror-01.cantv.net/debian/ testing main contrib non-free
+deb http://mirror-01.cantv.net/debian-security testing/updates main contrib
+#Repos de Seguridad
+deb http://security.debian.org/ testing/updates main
+deb-src http://security.debian.org/ testing/updates main
+
+#Repos Testing Originales
+#deb-src http://ftp.debian.org/debian/ testing main
+#deb-src http://ftp.debian.org/debian/ testing main
+#deb http://ftp.us.debian.org/debian testing main contrib non-free
+
+# Multimedia testing (con llave 1)
+deb http://www.deb-multimedia.org testing main non-free
+deb-src http://www.deb-multimedia.org/ testing main non-free
+
+#Testing-Updates de CANTV Repos
+deb http://debian.cantv.net/debian/ testing-updates main contrib non-free
+deb-src http://debian.cantv.net/debian/ testing-updates main contrib non-free 
+
+# testing-updates, previously known as 'volatile'
+#deb http://cdn.debian.net/debian/ testing-updates main
+#deb-src http://cdn.debian.net/debian/ testing-updates main
