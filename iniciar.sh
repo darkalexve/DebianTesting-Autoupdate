@@ -16,7 +16,7 @@ sleep 2 #Espera por 2 segs
 
 echo "Paso 2: Instalando Git"
 apt-get update
-apt-get install git
+apt-get install -y git
 
 sleep 2 #Espera por 2 segs
 
@@ -34,8 +34,8 @@ sudo apt-get update
 sleep 2 #Espera por 2 segs
 
 echo "Paso 5: Descargando e instalando los paquetes de Debian Testing"
-apt-get --download-only dist-upgrade
-apt-get dist-upgrade
+apt-get --download-only -y dist-upgrade
+apt-get -y dist-upgrade
 
 sleep 2 #Espera por 2 segs
 echo "Paso 6: Añadiendo Google DNS"
@@ -60,7 +60,7 @@ echo "Paso 8: Limpiando todo el desastre que quedo.."
 
 apt-get autoclean
 apt-get clean
-sudo apt-get autoremove
+apt-get autoremove
 sleep 10 #espera 10 segs
 echo "Gracias por usar este Script, aun queda un paso, espera 10 segundos..."
 
